@@ -1,0 +1,1136 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Aashka — jabones artesanales 100% naturales, libres de químicos, hechos a mano en México. Pensados para pieles sensibles. Envíos a toda la República.">
+<meta property="og:title" content="Aashka — Crea tu esencia">
+<meta property="og:description" content="No es un jabón, es volver a lo natural. Jabones artesanales 100% naturales.">
+<meta property="og:image" content="assets/logo.png">
+<link rel="icon" href="assets/logo.png">
+<style>
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0}
+  img{max-width:100%}
+  [hidden]{display:none!important}
+</style>
+<title>Aashka Jabones</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#F6E9D2;
+    --cream-soft:#FBF3E5;
+    --ink:#3A2312;
+    --ink-soft:#78573A;
+    --gold:#B07F35;
+    --gold-deep:#8A5F22;
+    --gold-line:rgba(138,95,34,0.35);
+    --teal:#3E8B84;
+    --teal-deep:#2C6D67;
+    --panel:#241407;
+    --panel-soft:#33200E;
+    --panel-fg:#F2E2C6;
+    --panel-fg-soft:#D8C4A6;
+    --shadow: 0 18px 40px -22px rgba(36,20,7,0.45);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --cream:#1B120A;
+      --cream-soft:#241809;
+      --ink:#F2E2C6;
+      --ink-soft:#C7A47C;
+      --gold:#D9AC66;
+      --gold-deep:#EAC384;
+      --gold-line:rgba(217,172,102,0.3);
+      --teal:#74B4AD;
+      --teal-deep:#95CBC4;
+      --panel:#100A05;
+      --panel-soft:#1C1109;
+      --shadow: 0 18px 44px -20px rgba(0,0,0,0.6);
+    }
+  }
+  :root[data-theme="dark"]{
+    --cream:#1B120A;
+    --cream-soft:#241809;
+    --ink:#F2E2C6;
+    --ink-soft:#C7A47C;
+    --gold:#D9AC66;
+    --gold-deep:#EAC384;
+    --gold-line:rgba(217,172,102,0.3);
+    --teal:#74B4AD;
+    --teal-deep:#95CBC4;
+    --panel:#100A05;
+    --panel-soft:#1C1109;
+    --shadow: 0 18px 44px -20px rgba(0,0,0,0.6);
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--cream);
+    color:var(--ink);
+    font-family:'Jost', ui-sans-serif, system-ui, sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.serif{
+    font-family:'Playfair Display', Georgia, 'Times New Roman', serif;
+    text-wrap:balance;
+    margin:0;
+  }
+  p{margin:0;}
+  a{color:inherit;}
+  img{display:block;max-width:100%;}
+  .wrap{
+    max-width:1180px;
+    margin:0 auto;
+    padding-inline:24px;
+  }
+  @media (min-width:640px){ .wrap{padding-inline:40px;} }
+
+  /* ---------- announcement bar ---------- */
+  .topbar{
+    background:var(--panel);
+    color:var(--gold);
+  }
+  .topbar .wrap{
+    display:flex;
+    justify-content:center;
+    gap:10px;
+    align-items:center;
+    padding-block:9px;
+    font-size:12.5px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    text-align:center;
+  }
+
+  /* ---------- header ---------- */
+  header{
+    padding-block:28px 8px;
+  }
+  .header-row{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:16px;
+    flex-wrap:wrap;
+  }
+  .brand{
+    display:flex;
+    align-items:center;
+    gap:16px;
+  }
+  .brand-logo{height:132px;width:auto;display:block;}
+  @media (max-width:640px){ .brand-logo{height:96px;} }
+  .brand-name{
+    font-size:clamp(28px,4vw,34px);
+    font-style:italic;
+    font-weight:600;
+    color:var(--gold-deep);
+    line-height:1;
+  }
+  .brand-sub{
+    display:block;
+    font-family:'Jost',sans-serif;
+    font-style:normal;
+    font-size:11px;
+    letter-spacing:.32em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+    margin-top:6px;
+  }
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    gap:9px;
+    padding:13px 24px;
+    border-radius:999px;
+    font-size:14px;
+    letter-spacing:.04em;
+    text-decoration:none;
+    font-weight:500;
+    white-space:nowrap;
+    border:1px solid transparent;
+    cursor:pointer;
+    font-family:'Jost',sans-serif;
+  }
+  .btn-primary{
+    background:var(--teal);
+    color:#FBF3E5;
+    box-shadow:var(--shadow);
+  }
+  .btn-primary:hover{background:var(--teal-deep);}
+  .btn-ghost{
+    background:transparent;
+    border-color:var(--gold-line);
+    color:var(--ink);
+  }
+  .btn-ghost:hover{border-color:var(--gold);}
+  .btn svg{width:17px;height:17px;flex:none;}
+
+  /* ---------- hero ---------- */
+  .hero{
+    padding-block:48px 76px;
+  }
+  .hero-grid{
+    display:grid;
+    grid-template-columns:1.05fr .95fr;
+    gap:56px;
+    align-items:center;
+  }
+  @media (max-width:880px){
+    .hero-grid{grid-template-columns:1fr;gap:44px;}
+  }
+  .eyebrow{
+    font-size:12px;
+    letter-spacing:.28em;
+    text-transform:uppercase;
+    color:var(--teal-deep);
+    font-weight:500;
+  }
+  .hero h1{
+    font-size:clamp(38px,5.4vw,58px);
+    line-height:1.06;
+    color:var(--ink);
+    margin-top:14px;
+  }
+  .hero h1 em{
+    font-style:italic;
+    color:var(--gold-deep);
+  }
+  .quote{
+    font-family:'Playfair Display',serif;
+    font-style:italic;
+    font-size:clamp(19px,2.4vw,23px);
+    color:var(--teal-deep);
+    line-height:1.5;
+    margin-top:22px;
+    border-left:2px solid var(--gold-line);
+    padding-left:18px;
+  }
+  .hero-copy{
+    margin-top:22px;
+    font-size:16.5px;
+    line-height:1.75;
+    color:var(--ink-soft);
+    max-width:46ch;
+  }
+  .hero-ctas{
+    display:flex;
+    flex-wrap:wrap;
+    gap:14px;
+    margin-top:32px;
+  }
+  .hero-tags{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px 22px;
+    margin-top:34px;
+  }
+  .hero-tags span{
+    font-size:12.5px;
+    letter-spacing:.06em;
+    color:var(--ink-soft);
+    display:flex;
+    align-items:center;
+    gap:7px;
+  }
+  .hero-tags svg{width:14px;height:14px;color:var(--teal);flex:none;}
+
+  /* hero visual collage */
+  .collage{
+    position:relative;
+    aspect-ratio:1/1.05;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+  .collage .leaf{
+    position:absolute;
+    top:-8%;
+    right:-10%;
+    width:56%;
+    opacity:.9;
+    color:var(--gold);
+    z-index:0;
+  }
+  .collage-photo{
+    position:absolute;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:var(--shadow);
+    border:5px solid var(--cream-soft);
+    outline:1px solid var(--gold-line);
+  }
+  .collage-photo img{width:100%;height:100%;object-fit:cover;}
+  .cp-1{width:54%;aspect-ratio:1/1;top:2%;left:4%;transform:rotate(-6deg);z-index:2;}
+  .cp-2{width:46%;aspect-ratio:4/3;bottom:6%;right:2%;transform:rotate(5deg);z-index:3;}
+  .cp-3{width:34%;aspect-ratio:1/1;bottom:0%;left:20%;transform:rotate(-3deg);z-index:4;}
+  .badge-price{
+    position:absolute;
+    top:38%;
+    right:-4%;
+    background:var(--panel);
+    color:var(--gold);
+    border-radius:50%;
+    width:104px;height:104px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    box-shadow:var(--shadow);
+    z-index:5;
+    transform:rotate(6deg);
+  }
+  .badge-price strong{font-family:'Playfair Display',serif;font-size:22px;font-style:italic;line-height:1;}
+  .badge-price span{font-size:9px;letter-spacing:.12em;text-transform:uppercase;margin-top:5px;color:var(--gold-line-txt,#d8b988);}
+
+  /* ---------- section heading ---------- */
+  .section{padding-block:64px;}
+  .section-head{
+    max-width:640px;
+    margin:0 auto 44px;
+    text-align:center;
+  }
+  .section-head .eyebrow{display:block;margin-bottom:10px;text-align:center;}
+  .section-head h2{
+    font-size:clamp(28px,3.6vw,38px);
+    color:var(--ink);
+  }
+  .section-head p{
+    margin-top:14px;
+    color:var(--ink-soft);
+    font-size:15.5px;
+    line-height:1.7;
+  }
+
+  /* ---------- benefits ---------- */
+  .benefits{
+    background:var(--cream-soft);
+    border-top:1px solid var(--gold-line);
+    border-bottom:1px solid var(--gold-line);
+  }
+  .benefits-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:28px;
+  }
+  @media (max-width:880px){ .benefits-grid{grid-template-columns:repeat(2,1fr);} }
+  .benefit{
+    text-align:center;
+    padding:8px;
+  }
+  .benefit .icon{
+    width:46px;height:46px;
+    margin:0 auto 16px;
+    display:flex;align-items:center;justify-content:center;
+    border-radius:50%;
+    background:var(--cream);
+    color:var(--teal);
+    border:1px solid var(--gold-line);
+  }
+  .benefit .icon svg{width:22px;height:22px;}
+  .benefit h3{
+    font-family:'Jost',sans-serif;
+    font-size:14.5px;
+    font-weight:600;
+    letter-spacing:.02em;
+    color:var(--ink);
+  }
+  .benefit p{
+    margin-top:7px;
+    font-size:13.5px;
+    color:var(--ink-soft);
+    line-height:1.55;
+  }
+
+  /* ---------- ingredients & aromas ---------- */
+  .ingredients-wrap{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    border-radius:26px;
+    overflow:hidden;
+    border:1px solid var(--gold-line);
+    box-shadow:var(--shadow);
+  }
+  @media (max-width:860px){ .ingredients-wrap{grid-template-columns:1fr;} }
+  .ingredients-side{
+    background:var(--panel);
+    color:var(--panel-fg);
+    padding:42px 38px;
+  }
+  .ingredients-side h3{
+    font-size:22px;
+    color:var(--gold);
+    margin-bottom:24px;
+  }
+  .ingredient-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:19px;}
+  .ingredient-list li{display:flex;gap:14px;align-items:flex-start;}
+  .ingredient-list .ic{
+    width:38px;height:38px;border-radius:50%;
+    background:var(--panel-soft);
+    border:1px solid rgba(217,172,102,.32);
+    display:flex;align-items:center;justify-content:center;flex:none;
+    color:var(--gold);
+  }
+  .ingredient-list .ic svg{width:18px;height:18px;}
+  .ingredient-list strong{display:block;font-size:14.5px;font-weight:600;color:var(--panel-fg);font-family:'Jost',sans-serif;}
+  .ingredient-list span{display:block;font-size:12.8px;color:var(--panel-fg-soft);margin-top:3px;line-height:1.5;}
+  .aromas-side{background:var(--cream-soft);padding:42px 38px;}
+  .aromas-side h3{font-size:22px;color:var(--ink);margin-bottom:8px;}
+  .aromas-side > p{font-size:13.8px;color:var(--ink-soft);margin-bottom:22px;line-height:1.6;max-width:40ch;}
+  .aroma-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+  @media (max-width:480px){ .aroma-grid{grid-template-columns:1fr;} }
+  .aroma-chip{
+    display:flex;align-items:center;gap:10px;
+    padding:12px 16px;
+    border-radius:12px;
+    background:var(--cream);
+    border:1px solid var(--gold-line);
+    font-size:13.5px;
+    color:var(--ink);
+  }
+  .aroma-chip::before{
+    content:"";
+    width:10px;height:10px;
+    border-radius:50%;
+    background:var(--dot);
+    flex:none;
+  }
+
+  /* ---------- products ---------- */
+  .products-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:28px;
+  }
+  @media (max-width:900px){ .products-grid{grid-template-columns:1fr;max-width:420px;margin-inline:auto;} }
+  .card{
+    background:var(--cream-soft);
+    border:1px solid var(--gold-line);
+    border-radius:22px;
+    overflow:hidden;
+    box-shadow:var(--shadow);
+    display:flex;
+    flex-direction:column;
+  }
+  .card.featured{
+    outline:2px solid var(--gold);
+    outline-offset:-2px;
+    position:relative;
+  }
+  .card-tag{
+    position:absolute;
+    top:16px;right:16px;
+    background:var(--gold);
+    color:var(--panel);
+    font-size:10.5px;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    padding:6px 12px;
+    border-radius:999px;
+    font-weight:600;
+    z-index:2;
+  }
+  .card-photo{
+    aspect-ratio:4/3;
+    background:var(--panel);
+  }
+  .card-photo img{width:100%;height:100%;object-fit:cover;}
+  .card-body{
+    padding:26px 24px 28px;
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+    flex:1;
+  }
+  .card-title{
+    display:flex;
+    align-items:baseline;
+    justify-content:space-between;
+    gap:10px;
+  }
+  .card-title h3{
+    font-size:24px;
+    color:var(--ink);
+  }
+  .card-meta{
+    font-size:11.5px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--teal-deep);
+    font-weight:500;
+  }
+  .card-prices{
+    display:flex;
+    gap:14px;
+    border-top:1px dashed var(--gold-line);
+    padding-top:16px;
+  }
+  .price-block{flex:1;}
+  .price-block .lbl{
+    font-size:10.5px;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+  }
+  .price-block .amt{
+    font-family:'Playfair Display',serif;
+    font-size:26px;
+    font-weight:600;
+    color:var(--gold-deep);
+    margin-top:3px;
+    font-variant-numeric:tabular-nums;
+  }
+  .price-block .amt sup{font-size:13px;margin-right:1px;}
+  .card-cta-row{
+    margin-top:auto;
+    display:flex;
+    gap:10px;
+  }
+  .card-cta{
+    flex:1;
+    display:inline-flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:2px;
+    padding:10px 8px;
+    border-radius:14px;
+    background:transparent;
+    border:1px solid var(--gold);
+    color:var(--gold-deep);
+    font-size:12.5px;
+    font-weight:500;
+    text-decoration:none;
+    text-align:center;
+    line-height:1.3;
+  }
+  .card-cta .cta-price{font-weight:600;font-size:13.5px;}
+  .card-cta:hover{background:var(--gold);color:var(--cream-soft);}
+  .card-cta.solid{
+    background:var(--teal);
+    border-color:var(--teal);
+    color:#FBF3E5;
+  }
+  .card-cta.solid:hover{background:var(--teal-deep);border-color:var(--teal-deep);}
+  .products-note{
+    text-align:center;
+    margin-top:30px;
+    font-size:13px;
+    color:var(--ink-soft);
+  }
+
+  /* ---------- how to order ---------- */
+  .how{background:var(--panel);color:var(--panel-fg);}
+  .how .eyebrow{color:var(--teal);}
+  .how .section-head h2, .how .section-head p{color:var(--panel-fg);}
+  .how .section-head p{color:var(--panel-fg-soft);}
+  .steps{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+    counter-reset:step;
+  }
+  @media (max-width:880px){ .steps{grid-template-columns:1fr;max-width:420px;margin-inline:auto;} }
+  .step{
+    position:relative;
+    padding:30px 24px 26px;
+    background:var(--panel-soft);
+    border-radius:18px;
+    border:1px solid rgba(217,172,102,0.18);
+  }
+  .step .num{
+    font-family:'Playfair Display',serif;
+    font-style:italic;
+    font-size:34px;
+    color:var(--gold);
+    line-height:1;
+  }
+  .step h3{
+    font-family:'Jost',sans-serif;
+    font-size:16px;
+    font-weight:600;
+    margin-top:14px;
+    color:var(--panel-fg);
+  }
+  .step p{
+    margin-top:9px;
+    font-size:13.8px;
+    line-height:1.6;
+    color:var(--panel-fg-soft);
+  }
+
+  /* ---------- form ---------- */
+  .form-section{
+    background:var(--cream-soft);
+  }
+  .form-wrap{
+    display:grid;
+    grid-template-columns:.85fr 1.15fr;
+    gap:0;
+    background:var(--cream);
+    border:1px solid var(--gold-line);
+    border-radius:26px;
+    overflow:hidden;
+    box-shadow:var(--shadow);
+  }
+  @media (max-width:860px){ .form-wrap{grid-template-columns:1fr;} }
+  .form-side{
+    background:var(--panel);
+    color:var(--panel-fg);
+    padding:44px 38px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    gap:28px;
+  }
+  .form-side h2{
+    font-size:clamp(24px,3vw,29px);
+    color:var(--panel-fg);
+  }
+  .form-side p{
+    margin-top:14px;
+    font-size:14.5px;
+    line-height:1.7;
+    color:var(--panel-fg-soft);
+  }
+  .form-side ul{list-style:none;margin:22px 0 0;padding:0;display:flex;flex-direction:column;gap:12px;}
+  .form-side li{display:flex;gap:10px;align-items:flex-start;font-size:13.8px;color:var(--panel-fg);}
+  .form-side li svg{width:16px;height:16px;color:var(--gold);flex:none;margin-top:2px;}
+  .form-contact{
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+    font-size:13.5px;
+    color:var(--panel-fg-soft);
+  }
+  .form-contact a{color:var(--gold);text-decoration:none;font-weight:500;}
+
+  .form-fields{padding:40px 38px;}
+  .field{margin-bottom:18px;}
+  .field label{
+    display:block;
+    font-size:12px;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+    margin-bottom:7px;
+  }
+  .field input, .field select, .field textarea{
+    width:100%;
+    padding:12px 14px;
+    border-radius:10px;
+    border:1px solid var(--gold-line);
+    background:var(--cream-soft);
+    color:var(--ink);
+    font-family:'Jost',sans-serif;
+    font-size:14.5px;
+  }
+  .field input:focus, .field select:focus, .field textarea:focus{
+    outline:2px solid var(--teal);
+    outline-offset:1px;
+  }
+  .field-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  @media (max-width:520px){ .field-row{grid-template-columns:1fr;} }
+  .form-fields .btn-primary{width:100%;justify-content:center;padding:14px 18px;margin-top:6px;font-size:15px;}
+  .form-msg{
+    margin-top:14px;
+    font-size:13px;
+    color:var(--teal-deep);
+    min-height:18px;
+  }
+
+  /* ---------- footer ---------- */
+  footer{
+    background:var(--panel);
+    color:#D8C4A6;
+    padding-block:44px 26px;
+  }
+  .footer-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+    flex-wrap:wrap;
+    padding-bottom:26px;
+    border-bottom:1px solid rgba(217,172,102,0.2);
+  }
+  .footer-brand{display:flex;align-items:center;gap:12px;}
+  .footer-brand .footer-logo{height:84px;width:auto;}
+  .footer-links{display:flex;gap:22px;flex-wrap:wrap;}
+  .footer-links a{
+    display:flex;align-items:center;gap:8px;
+    font-size:13.5px;color:#EADDC2;text-decoration:none;
+  }
+  .footer-links a svg{width:16px;height:16px;color:var(--gold);}
+  .footer-bottom{
+    padding-top:22px;
+    display:flex;
+    justify-content:space-between;
+    gap:14px;
+    flex-wrap:wrap;
+    font-size:12px;
+    color:#A88A66;
+  }
+
+  /* floating whatsapp */
+  .float-wa{
+    position:fixed;
+    bottom:20px;right:20px;
+    width:58px;height:58px;
+    border-radius:50%;
+    background:var(--teal);
+    color:#fff;
+    display:flex;align-items:center;justify-content:center;
+    box-shadow:0 12px 26px -8px rgba(0,0,0,.5);
+    z-index:40;
+    text-decoration:none;
+  }
+  .float-wa svg{width:28px;height:28px;}
+
+  @media (prefers-reduced-motion:no-preference){
+    .reveal{
+      animation:rise .7s ease both;
+    }
+    @keyframes rise{
+      from{opacity:0;transform:translateY(14px);}
+      to{opacity:1;transform:translateY(0);}
+    }
+  }
+</style>
+</head>
+<body>
+
+
+<div class="topbar">
+  <div class="wrap">
+    <span>Hecho a mano en M&eacute;xico &nbsp;&middot;&nbsp; Env&iacute;os a toda la Rep&uacute;blica Mexicana</span>
+  </div>
+</div>
+
+<header>
+  <div class="wrap header-row">
+    <div class="brand">
+      <img class="brand-logo" src="assets/logo.png" alt="Aashka &mdash; Crea tu esencia">
+    </div>
+    <a class="btn btn-primary" id="hdr-wa-btn" href="#" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.36 5.07L2 22l5.06-1.33A9.94 9.94 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm5.2 14.2c-.22.62-1.28 1.18-1.77 1.24-.45.06-1.02.08-1.65-.1-.38-.11-.87-.28-1.5-.55-2.64-1.14-4.36-3.8-4.5-3.98-.13-.18-1.08-1.43-1.08-2.73 0-1.3.68-1.93.92-2.2.24-.26.53-.33.71-.33h.51c.16 0 .38-.06.6.45.22.53.75 1.83.82 1.96.07.13.11.29.02.47-.09.18-.13.29-.26.44-.13.15-.28.34-.4.46-.13.13-.27.27-.11.53.16.26.71 1.17 1.52 1.9 1.05.94 1.93 1.23 2.2 1.37.26.13.42.11.57-.07.16-.18.66-.77.84-1.03.18-.27.35-.22.6-.13.24.09 1.55.73 1.82.87.26.13.44.2.5.31.07.13.07.71-.15 1.33z"/></svg>
+      Pedir por WhatsApp
+    </a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="reveal">
+      <span class="eyebrow">Aashka &middot; Crea tu esencia</span>
+      <h1>Jabones artesanales para volver a <em>lo natural</em>.</h1>
+      <p class="quote">&ldquo;No es un jab&oacute;n, es volver a lo natural.&rdquo;</p>
+      <p class="hero-copy">Hechos a mano, 100% naturales y libres de qu&iacute;micos agresivos &mdash; pensados para pieles sensibles o con alguna condici&oacute;n que necesita cuidado real, no promesas. Cu&eacute;ntanos qu&eacute; buscas y te ayudamos a elegir el jab&oacute;n ideal para ti.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" id="hero-wa-btn" href="#" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.36 5.07L2 22l5.06-1.33A9.94 9.94 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm5.2 14.2c-.22.62-1.28 1.18-1.77 1.24-.45.06-1.02.08-1.65-.1-.38-.11-.87-.28-1.5-.55-2.64-1.14-4.36-3.8-4.5-3.98-.13-.18-1.08-1.43-1.08-2.73 0-1.3.68-1.93.92-2.2.24-.26.53-.33.71-.33h.51c.16 0 .38-.06.6.45.22.53.75 1.83.82 1.96.07.13.11.29.02.47-.09.18-.13.29-.26.44-.13.15-.28.34-.4.46-.13.13-.27.27-.11.53.16.26.71 1.17 1.52 1.9 1.05.94 1.93 1.23 2.2 1.37.26.13.42.11.57-.07.16-.18.66-.77.84-1.03.18-.27.35-.22.6-.13.24.09 1.55.73 1.82.87.26.13.44.2.5.31.07.13.07.71-.15 1.33z"/></svg>
+          Pedir ahora
+        </a>
+        <a class="btn btn-ghost" href="#productos">Ver jabones y precios</a>
+      </div>
+      <div class="hero-tags">
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>100% natural</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Libre de qu&iacute;micos</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Hecho a mano</span>
+      </div>
+    </div>
+
+    <div class="collage reveal">
+      <svg class="leaf" viewBox="0 0 220 220" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M10 210 C60 160 90 120 110 60" stroke="currentColor" stroke-width="2"/>
+        <path d="M40 180 C55 165 58 150 50 132" stroke="currentColor" stroke-width="1.6" fill="none"/>
+        <path d="M65 150 C82 142 90 128 86 108" stroke="currentColor" stroke-width="1.6" fill="none"/>
+        <path d="M90 115 C108 112 118 98 116 78" stroke="currentColor" stroke-width="1.6" fill="none"/>
+        <ellipse cx="46" cy="168" rx="12" ry="6" fill="currentColor" transform="rotate(-40 46 168)"/>
+        <ellipse cx="76" cy="135" rx="12" ry="6" fill="currentColor" transform="rotate(-35 76 135)"/>
+        <ellipse cx="100" cy="98" rx="11" ry="5.5" fill="currentColor" transform="rotate(-30 100 98)"/>
+      </svg>
+      <div class="collage-photo cp-1"><img src="assets/grande.jpg" alt="Jab&oacute;n artesanal Aashka tama&ntilde;o Grande, dise&ntilde;o mariposa"></div>
+      <div class="collage-photo cp-2"><img src="assets/mediano.jpg" alt="Jab&oacute;n artesanal Aashka tama&ntilde;o Mediano, liso"></div>
+      <div class="collage-photo cp-3"><img src="assets/pequeno.jpg" alt="Jab&oacute;n artesanal Aashka tama&ntilde;o Peque&ntilde;o"></div>
+      <div class="badge-price"><strong>$45</strong><span>desde</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section benefits">
+  <div class="wrap">
+    <div class="benefits-grid">
+      <div class="benefit reveal">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3c4 3 7 6 7 10a7 7 0 1 1-14 0c0-4 3-7 7-10Z"/></svg></div>
+        <h3>100% natural</h3>
+        <p>Ingredientes de origen vegetal, sin rellenos ni derivados sint&eacute;ticos.</p>
+      </div>
+      <div class="benefit reveal">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 12l5 5L20 6"/></svg></div>
+        <h3>Libre de qu&iacute;micos</h3>
+        <p>Sin sulfatos, parabenos ni fragancias agresivas para tu piel.</p>
+      </div>
+      <div class="benefit reveal">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-4.35-9.5-9C.8 8.3 2.6 4.7 6 4.2c2-.3 3.7.6 6 3 2.3-2.4 4-3.3 6-3 3.4.5 5.2 4.1 3.5 7.8C19 16.65 12 21 12 21Z"/></svg></div>
+        <h3>Para pieles sensibles</h3>
+        <p>Pensados para pieles con alguna condici&oacute;n que necesita cuidado extra.</p>
+      </div>
+      <div class="benefit reveal">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 21V10M7 10l5-6 5 6M7 10h10M17 21V10"/></svg></div>
+        <h3>Hecho a mano</h3>
+        <p>Elaborados en peque&ntilde;os lotes, con tiempo y atenci&oacute;n al detalle.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="ingredientes">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Elaboraci&oacute;n</span>
+      <h2>Ingredientes y beneficios</h2>
+      <p>Recetas simples, con lo justo y necesario, y un beneficio real para tu piel en cada ingrediente. Adem&aacute;s, eliges el aroma de tu jab&oacute;n sin costo extra.</p>
+    </div>
+    <div class="ingredients-wrap">
+      <div class="ingredients-side reveal">
+        <h3>Lo que llevan</h3>
+        <ul class="ingredient-list">
+          <li>
+            <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2s6 6.5 6 11a6 6 0 1 1-12 0c0-4.5 6-11 6-11Z"/></svg></span>
+            <div><strong>Glicerina vegetal</strong><span>Limpia la piel sin resecarla</span></div>
+          </li>
+          <li>
+            <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 14c0-5 4-9 8-9s8 4 8 9-4 7-8 7-8-2-8-7Z"/><path d="M4 14c2 2 5 3 8 3s6-1 8-3"/></svg></span>
+            <div><strong>Aceite de coco</strong><span>Hidrataci&oacute;n profunda y suavidad</span></div>
+          </li>
+          <li>
+            <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21V9M12 9c0-4 3-6 7-6-1 4-3 6-7 6Zm0 4c0-3-2.5-5-6-5 1 3 2.5 5 6 5Z"/></svg></span>
+            <div><strong>Jengibre</strong><span>Revitaliza y activa la piel</span></div>
+          </li>
+          <li>
+            <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l2.5 4.5H9.5L12 3Zm0 4.5v13M6 12h12M7 16h10M8 20h8"/></svg></span>
+            <div><strong>Miel de abeja</strong><span>Calma la piel y la mantiene hidratada</span></div>
+          </li>
+          <li>
+            <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M6 6l2 2M16 16l2 2M18 6l-2 2M8 16l-2 2"/></svg></span>
+            <div><strong>Aroma</strong><span>El que t&uacute; elijas</span></div>
+          </li>
+        </ul>
+      </div>
+      <div class="aromas-side reveal">
+        <h3>Aromas a elegir</h3>
+        <p>Cada jab&oacute;n se prepara con el aroma que prefieras. Cu&eacute;ntanoslo al hacer tu pedido.</p>
+        <div class="aroma-grid">
+          <span class="aroma-chip" style="--dot:#C97B4A">Manzana canela</span>
+          <span class="aroma-chip" style="--dot:#C9A227">Bergamota</span>
+          <span class="aroma-chip" style="--dot:#A13F3F">Frutos rojos</span>
+          <span class="aroma-chip" style="--dot:#8577B5">Lavanda</span>
+          <span class="aroma-chip" style="--dot:#3F7A54">Pino</span>
+          <span class="aroma-chip" style="--dot:#8A6238">S&aacute;ndalo</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="productos">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Cat&aacute;logo</span>
+      <h2>Elige tu tama&ntilde;o</h2>
+      <p>Tres presentaciones para acompa&ntilde;ar tu rutina, en individual o en paquete de 8 para ahorrar. Precios en pesos mexicanos.</p>
+    </div>
+    <div class="products-grid">
+
+      <div class="card reveal">
+        <div class="card-photo"><img src="assets/grande.jpg" alt="Jab&oacute;n Aashka Grande, 92 gramos, dise&ntilde;o mariposa"></div>
+        <div class="card-body">
+          <div class="card-title">
+            <h3>Grande</h3>
+            <span class="card-meta">92&nbsp;g &middot; Mariposa</span>
+          </div>
+          <div class="card-prices">
+            <div class="price-block">
+              <div class="lbl">Individual</div>
+              <div class="amt"><sup>$</sup>65</div>
+            </div>
+            <div class="price-block">
+              <div class="lbl">Paquete de 8</div>
+              <div class="amt"><sup>$</sup>260</div>
+            </div>
+          </div>
+          <div class="card-cta-row">
+            <a class="card-cta wa-order" href="#" data-jabon="Grande (92 g, mariposa) &mdash; Individual, $65" target="_blank" rel="noopener">
+              Individual<span class="cta-price">$65</span>
+            </a>
+            <a class="card-cta wa-order solid" href="#" data-jabon="Grande (92 g, mariposa) &mdash; Paquete de 8, $260" target="_blank" rel="noopener">
+              Paquete de 8<span class="cta-price">$260</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card featured reveal">
+        <span class="card-tag">Favorito</span>
+        <div class="card-photo"><img src="assets/mediano.jpg" alt="Jab&oacute;n Aashka Mediano, 70 gramos, liso"></div>
+        <div class="card-body">
+          <div class="card-title">
+            <h3>Mediano</h3>
+            <span class="card-meta">70&nbsp;g &middot; Liso</span>
+          </div>
+          <div class="card-prices">
+            <div class="price-block">
+              <div class="lbl">Individual</div>
+              <div class="amt"><sup>$</sup>50</div>
+            </div>
+            <div class="price-block">
+              <div class="lbl">Paquete de 8</div>
+              <div class="amt"><sup>$</sup>200</div>
+            </div>
+          </div>
+          <div class="card-cta-row">
+            <a class="card-cta wa-order" href="#" data-jabon="Mediano (70 g, liso) &mdash; Individual, $50" target="_blank" rel="noopener">
+              Individual<span class="cta-price">$50</span>
+            </a>
+            <a class="card-cta wa-order solid" href="#" data-jabon="Mediano (70 g, liso) &mdash; Paquete de 8, $200" target="_blank" rel="noopener">
+              Paquete de 8<span class="cta-price">$200</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card reveal">
+        <div class="card-photo"><img src="assets/pequeno.jpg" alt="Jab&oacute;n Aashka Peque&ntilde;o, 60 gramos"></div>
+        <div class="card-body">
+          <div class="card-title">
+            <h3>Peque&ntilde;o</h3>
+            <span class="card-meta">60&nbsp;g</span>
+          </div>
+          <div class="card-prices">
+            <div class="price-block">
+              <div class="lbl">Individual</div>
+              <div class="amt"><sup>$</sup>45</div>
+            </div>
+            <div class="price-block">
+              <div class="lbl">Paquete de 8</div>
+              <div class="amt"><sup>$</sup>170</div>
+            </div>
+          </div>
+          <div class="card-cta-row">
+            <a class="card-cta wa-order" href="#" data-jabon="Peque&ntilde;o (60 g) &mdash; Individual, $45" target="_blank" rel="noopener">
+              Individual<span class="cta-price">$45</span>
+            </a>
+            <a class="card-cta wa-order solid" href="#" data-jabon="Peque&ntilde;o (60 g) &mdash; Paquete de 8, $170" target="_blank" rel="noopener">
+              Paquete de 8<span class="cta-price">$170</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <p class="products-note">Los tres tama&ntilde;os est&aacute;n disponibles en los 6 aromas de arriba, sin costo extra &middot; env&iacute;os a toda la Rep&uacute;blica Mexicana, costo seg&uacute;n destino.</p>
+  </div>
+</section>
+
+<section class="section how">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Proceso</span>
+      <h2>C&oacute;mo pedir</h2>
+      <p>Sin catálogos complicados: eliges, nos escribes y lo recibes en casa.</p>
+    </div>
+    <div class="steps">
+      <div class="step reveal">
+        <div class="num">01</div>
+        <h3>Elige tu jab&oacute;n</h3>
+        <p>Revisa tama&ntilde;os y precios arriba, o cu&eacute;ntanos qu&eacute; necesita tu piel y te recomendamos uno.</p>
+      </div>
+      <div class="step reveal">
+        <div class="num">02</div>
+        <h3>Escr&iacute;benos</h3>
+        <p>Por WhatsApp o con el formulario de abajo &mdash; nos llegan tus datos y tu pedido al instante.</p>
+      </div>
+      <div class="step reveal">
+        <div class="num">03</div>
+        <h3>Rec&iacute;belo en casa</h3>
+        <p>Confirmamos tu pedido y lo enviamos a cualquier punto de la Rep&uacute;blica Mexicana.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section form-section" id="pedido">
+  <div class="wrap">
+    <div class="form-wrap">
+      <div class="form-side">
+        <div>
+          <span class="eyebrow" style="color:var(--gold)">Hagamos tu pedido</span>
+          <h2 class="serif">Cu&eacute;ntanos qu&eacute; buscas</h2>
+          <p>Deja tus datos y en un clic te abrimos WhatsApp con tu pedido ya redactado, listo para enviar.</p>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12l5 5L20 6"/></svg>Respuesta personal, no autom&aacute;tica</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12l5 5L20 6"/></svg>Te ayudamos a elegir seg&uacute;n tu piel</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12l5 5L20 6"/></svg>Env&iacute;os a toda la Rep&uacute;blica</li>
+          </ul>
+        </div>
+        <div class="form-contact">
+          <span>&iquest;Prefieres escribir directo?</span>
+          <a id="side-wa-link" href="#" target="_blank" rel="noopener">WhatsApp&nbsp;55&nbsp;3826&nbsp;0372</a>
+          <a id="side-ig-link" href="https://instagram.com/crea_tu_esencia" target="_blank" rel="noopener">Instagram&nbsp;@crea_tu_esencia</a>
+        </div>
+      </div>
+
+      <div class="form-fields">
+        <form id="order-form">
+          <div class="field">
+            <label for="f-nombre">Nombre</label>
+            <input id="f-nombre" name="nombre" type="text" required placeholder="Tu nombre">
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="f-contacto">WhatsApp o correo</label>
+              <input id="f-contacto" name="contacto" type="text" required placeholder="55 1234 5678">
+            </div>
+            <div class="field">
+              <label for="f-jabon">Jab&oacute;n de inter&eacute;s</label>
+              <select id="f-jabon" name="jabon">
+                <option value="Grande (92 g, mariposa) &mdash; Individual, $65">Grande &middot; Individual &middot; $65</option>
+                <option value="Grande (92 g, mariposa) &mdash; Paquete de 8, $260">Grande &middot; Paquete de 8 &middot; $260</option>
+                <option value="Mediano (70 g, liso) &mdash; Individual, $50" selected>Mediano &middot; Individual &middot; $50</option>
+                <option value="Mediano (70 g, liso) &mdash; Paquete de 8, $200">Mediano &middot; Paquete de 8 &middot; $200</option>
+                <option value="Peque&ntilde;o (60 g) &mdash; Individual, $45">Peque&ntilde;o &middot; Individual &middot; $45</option>
+                <option value="Peque&ntilde;o (60 g) &mdash; Paquete de 8, $170">Peque&ntilde;o &middot; Paquete de 8 &middot; $170</option>
+                <option value="No estoy seguro, quiero recomendaci&oacute;n">No estoy seguro / quiero recomendaci&oacute;n</option>
+              </select>
+            </div>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="f-aroma">Aroma preferido</label>
+              <select id="f-aroma" name="aroma">
+                <option value="Manzana canela">Manzana canela</option>
+                <option value="Bergamota">Bergamota</option>
+                <option value="Frutos rojos">Frutos rojos</option>
+                <option value="Lavanda">Lavanda</option>
+                <option value="Pino">Pino</option>
+                <option value="S&aacute;ndalo">S&aacute;ndalo</option>
+                <option value="Sorpr&eacute;ndeme (t&uacute; eliges)">Sorpr&eacute;ndeme (t&uacute; eliges)</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="f-cantidad">Cantidad</label>
+              <input id="f-cantidad" name="cantidad" type="text" placeholder="Ej. 2 piezas o 1 paquete de 8">
+            </div>
+          </div>
+          <div class="field">
+            <label for="f-cp">C&oacute;digo postal (env&iacute;o)</label>
+            <input id="f-cp" name="cp" type="text" placeholder="Opcional">
+          </div>
+          <div class="field">
+            <label for="f-mensaje">Mensaje (opcional)</label>
+            <textarea id="f-mensaje" name="mensaje" rows="3" placeholder="Cu&eacute;ntanos si tu piel necesita algo en especial"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.36 5.07L2 22l5.06-1.33A9.94 9.94 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm5.2 14.2c-.22.62-1.28 1.18-1.77 1.24-.45.06-1.02.08-1.65-.1-.38-.11-.87-.28-1.5-.55-2.64-1.14-4.36-3.8-4.5-3.98-.13-.18-1.08-1.43-1.08-2.73 0-1.3.68-1.93.92-2.2.24-.26.53-.33.71-.33h.51c.16 0 .38-.06.6.45.22.53.75 1.83.82 1.96.07.13.11.29.02.47-.09.18-.13.29-.26.44-.13.15-.28.34-.4.46-.13.13-.27.27-.11.53.16.26.71 1.17 1.52 1.9 1.05.94 1.93 1.23 2.2 1.37.26.13.42.11.57-.07.16-.18.66-.77.84-1.03.18-.27.35-.22.6-.13.24.09 1.55.73 1.82.87.26.13.44.2.5.31.07.13.07.71-.15 1.33z"/></svg>
+            Enviar pedido por WhatsApp
+          </button>
+          <div class="form-msg" id="form-msg"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img class="brand-logo footer-logo" src="assets/logo.png" alt="Aashka &mdash; Crea tu esencia">
+      </div>
+      <div class="footer-links">
+        <a id="footer-wa-link" href="#" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.36 5.07L2 22l5.06-1.33A9.94 9.94 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm5.2 14.2c-.22.62-1.28 1.18-1.77 1.24-.45.06-1.02.08-1.65-.1-.38-.11-.87-.28-1.5-.55-2.64-1.14-4.36-3.8-4.5-3.98-.13-.18-1.08-1.43-1.08-2.73 0-1.3.68-1.93.92-2.2.24-.26.53-.33.71-.33h.51c.16 0 .38-.06.6.45.22.53.75 1.83.82 1.96.07.13.11.29.02.47-.09.18-.13.29-.26.44-.13.15-.28.34-.4.46-.13.13-.27.27-.11.53.16.26.71 1.17 1.52 1.9 1.05.94 1.93 1.23 2.2 1.37.26.13.42.11.57-.07.16-.18.66-.77.84-1.03.18-.27.35-.22.6-.13.24.09 1.55.73 1.82.87.26.13.44.2.5.31.07.13.07.71-.15 1.33z"/></svg>
+          55 3826 0372
+        </a>
+        <a href="https://instagram.com/crea_tu_esencia" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+          @crea_tu_esencia
+        </a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>Aashka &middot; Crea tu esencia. Jabones artesanales hechos a mano en M&eacute;xico.</span>
+      <span>Precios en pesos mexicanos. Costo de env&iacute;o seg&uacute;n destino.</span>
+    </div>
+  </div>
+</footer>
+
+<a class="float-wa" id="float-wa" href="#" target="_blank" rel="noopener" aria-label="Pedir por WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.36 5.07L2 22l5.06-1.33A9.94 9.94 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm5.2 14.2c-.22.62-1.28 1.18-1.77 1.24-.45.06-1.02.08-1.65-.1-.38-.11-.87-.28-1.5-.55-2.64-1.14-4.36-3.8-4.5-3.98-.13-.18-1.08-1.43-1.08-2.73 0-1.3.68-1.93.92-2.2.24-.26.53-.33.71-.33h.51c.16 0 .38-.06.6.45.22.53.75 1.83.82 1.96.07.13.11.29.02.47-.09.18-.13.29-.26.44-.13.15-.28.34-.4.46-.13.13-.27.27-.11.53.16.26.71 1.17 1.52 1.9 1.05.94 1.93 1.23 2.2 1.37.26.13.42.11.57-.07.16-.18.66-.77.84-1.03.18-.27.35-.22.6-.13.24.09 1.55.73 1.82.87.26.13.44.2.5.31.07.13.07.71-.15 1.33z"/></svg>
+</a>
+
+<script>
+(function(){
+  var WA_NUMBER = "5215538260372";
+  var baseMsg = "Hola Aashka, me interesa un jabón artesanal.";
+  var baseUrl = "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent(baseMsg);
+
+  document.querySelectorAll('#hdr-wa-btn,#hero-wa-btn,#float-wa,#side-wa-link,#footer-wa-link').forEach(function(el){
+    el.setAttribute('href', baseUrl);
+  });
+
+  document.querySelectorAll('.wa-order').forEach(function(el){
+    el.addEventListener('click', function(e){
+      e.preventDefault();
+      var jabon = el.getAttribute('data-jabon');
+      var msg = "Hola Aashka, quiero pedir el jabón " + jabon + ".";
+      window.open("https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent(msg), "_blank");
+    });
+  });
+
+  var form = document.getElementById('order-form');
+  var msgEl = document.getElementById('form-msg');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var nombre = document.getElementById('f-nombre').value.trim();
+    var contacto = document.getElementById('f-contacto').value.trim();
+    var jabon = document.getElementById('f-jabon').value;
+    var aroma = document.getElementById('f-aroma').value;
+    var cantidad = document.getElementById('f-cantidad').value.trim();
+    var cp = document.getElementById('f-cp').value.trim();
+    var mensaje = document.getElementById('f-mensaje').value.trim();
+
+    if(!nombre || !contacto){
+      msgEl.textContent = 'Por favor completa tu nombre y tu WhatsApp o correo.';
+      msgEl.style.color = '#b45252';
+      return;
+    }
+
+    var lines = [
+      "Hola Aashka, quiero hacer un pedido:",
+      "Nombre: " + nombre,
+      "Contacto: " + contacto,
+      "Jabón: " + jabon,
+      "Aroma: " + aroma
+    ];
+    if(cantidad) lines.push("Cantidad: " + cantidad);
+    if(cp) lines.push("Código postal: " + cp);
+    if(mensaje) lines.push("Mensaje: " + mensaje);
+
+    var text = lines.join("\n");
+    window.open("https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent(text), "_blank");
+    msgEl.style.color = 'var(--teal-deep)';
+    msgEl.textContent = 'Abrimos WhatsApp con tu pedido listo. Solo falta que le des enviar — ¡gracias!';
+  });
+})();
+</script>
+
+</body>
+</html>
